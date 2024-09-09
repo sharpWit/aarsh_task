@@ -1,0 +1,32 @@
+export const toys = [
+  {
+    id: 1,
+    name: "car",
+    disc: "Jada Toys Disney Pixar Lightning McQueen",
+    wSize: 120,
+    hSize: 60,
+    dSize: 30,
+    price: "39.99",
+    image: "/images/car.png",
+  },
+  {
+    id: 2,
+    name: "donkey",
+    disc: "Pioupiou Enchanted 30 inch Giant Plush Unicorn - Sparkled Design",
+    wSize: 220,
+    hSize: 73,
+    dSize: 42,
+    price: "22.99",
+    image: "/images/donkey.png",
+  },
+  {
+    id: 3,
+    name: "dino",
+    disc: "Molto Dino Blocks Interactive Playset - 30 Pieces",
+    wSize: 130,
+    hSize: 70,
+    dSize: 40,
+    price: "24.99",
+    image: "/images/dino.png",
+  },
+];

@@ -1,0 +1,19 @@
+.disc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  background: #000000;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}

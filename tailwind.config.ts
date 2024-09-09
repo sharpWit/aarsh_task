@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "bg-svg": "url('/bg.svg')",
+        "footer-svg": "url('/footer.svg')",
+      },
     },
   },
   plugins: [],
