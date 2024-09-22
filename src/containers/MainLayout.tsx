@@ -1,10 +1,12 @@
 // third-party
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Box, Container, Typography } from '@mui/material';
 
 import Header from '../components/header/Header';
 import Sidebar from '../components/sidebar/Sidebar';
+import styles from './MainLayout.module.scss';
+import MainRoot from '../components/main/MainRoot';
 
 function Copyright() {
   return (
@@ -12,7 +14,7 @@ function Copyright() {
       variant="body2"
       align="center"
       sx={{
-        height: '60px',
+        height: '44px',
         marginTop: '4px',
         color: 'text.secondary'
       }}
@@ -27,6 +29,9 @@ function Copyright() {
 }
 
 const MainLayout = () => {
+  const location = useLocation();
+  const isRoot = location.pathname === '/';
+
   return (
     <>
       {/* Header */}
@@ -56,25 +61,15 @@ const MainLayout = () => {
             width: '100%',
             height: '100%',
             mt: '48px',
-            paddingTop: '.9em',
             backgroundColor: '#ffffff'
           }}
+          className={styles['css-1mtq39y-MuiContainer-root']}
         >
-          {/* Main Header */}
+          {/* Main Content */}
           <PerfectScrollbar component="div" style={{ width: '100%', height: '100%', maxHeight: 'calc(100vh - 30px)', overflowX: 'hidden' }}>
-            <Typography variant="h3" component="h3" sx={{ mb: 2 }}>
-              Material UI Vite.js example in TypeScript
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: '4px', padding: '.3em', backgroundColor: 'orange' }}>
-              <Link to="/about">About</Link>
-              <Link to="/dashboard">Dashboard</Link>
-              <Link to="/sample-page">Sample</Link>
+            <Box sx={{ backgroundColor: 'slateblue', color: 'white', height: '100%', overflow: 'auto' }}>
+              {isRoot ? <MainRoot /> : <Outlet />}
             </Box>
-
-            {/* Main Content */}
-            <Container sx={{ backgroundColor: 'slateblue', color: 'white', height: '100%', overflow: 'auto', marginTop: '12px' }}>
-              <Outlet />
-            </Container>
 
             {/* Copyright */}
             <Copyright />

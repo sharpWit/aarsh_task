@@ -1,4 +1,6 @@
 import { Box } from '@mui/material';
+import { NavLink } from 'react-router-dom';
+import { navMenus } from '../../libs/options';
 
 const Sidebar = () => {
   return (
@@ -14,9 +16,9 @@ const Sidebar = () => {
         gap: '17px'
       }}
     >
-      {['activity', 'chat', 'teams', 'calendar', 'calls', 'files', 'van-arsdel', 'elipses', 'apps'].map((iconName, idx) => (
-        <div key={idx} style={{ cursor: 'pointer' }}>
-          {iconName === 'van-arsdel' ? (
+      {navMenus.map((item) => (
+        <NavLink to={`${item.slug}`} key={item.id} style={{ cursor: 'pointer' }}>
+          {item.iconName === 'van-arsdel' ? (
             <img
               src="src/assets/van-arsdel.png"
               alt="Van Arsdel logo"
@@ -32,8 +34,8 @@ const Sidebar = () => {
             />
           ) : (
             <img
-              src={`src/assets/icons/${iconName}.png`}
-              alt={`${iconName} icon`}
+              src={`src/assets/icons/${item.iconName}.png`}
+              alt={`${item.iconName} icon`}
               style={{
                 width: '100%',
                 height: '100%',
@@ -45,7 +47,7 @@ const Sidebar = () => {
               onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             />
           )}
-        </div>
+        </NavLink>
       ))}
     </Box>
   );
