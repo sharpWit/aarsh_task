@@ -1,6 +1,7 @@
 import { Box, Card } from '@mui/material';
 import { chartsItems } from '../../libs/options';
 import Grid from '@mui/material/Grid2';
+import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
 
 const ChartCards = () => {
   return (
@@ -10,6 +11,8 @@ const ChartCards = () => {
           <Grid key={card.id} size={4}>
             <Card
               sx={{
+                // height: '100%',
+                // width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -18,17 +21,21 @@ const ChartCards = () => {
             >
               <h3>{card.title}</h3>
               <p>{card.disc}</p>
-              <div style={{ cursor: 'pointer', marginLeft: 0, width: 'auto', height: 'auto', maxWidth: '250px', maxHeight: '240px' }}>
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  style={{
+
+              <div style={{ width: '90%', height: '100%' }}>
+                <Gauge
+                  value={72}
+                  startAngle={-90}
+                  endAngle={90}
+                  sx={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'contain',
-                    imageRendering: 'crisp-edges',
-                    filter: 'contrast(110%) brightness(95%)'
+                    [`& .${gaugeClasses.valueText}`]: {
+                      fontSize: 40,
+                      transform: 'translate(0px, 0px)'
+                    }
                   }}
+                  text={({ value }) => `${value} %`}
                 />
               </div>
             </Card>

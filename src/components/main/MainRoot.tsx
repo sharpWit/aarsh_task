@@ -2,12 +2,13 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useState } from 'react';
+import ChartCards from './ChartCards';
 import SidebarDropdown from './SidebarDropdown ';
 import { sidebarItems } from '../../libs/options';
 import { Container, FormControl, MenuItem, Select, SelectChangeEvent, TextField } from '@mui/material';
-import styles from './MainRoot.module.scss';
-import ChartCards from './ChartCards';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import ChartCardsPhones from './ChartCardsPhones';
+import styles from './MainRoot.module.scss';
 
 function samePageLinkNavigation(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
   if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) {
@@ -60,7 +61,7 @@ const MainRoot = () => {
       component="div"
       style={{ width: '100%', height: '100%', maxHeight: 'calc(100vh - 60px)', overflowX: 'hidden', marginBottom: '10px' }}
     >
-      <div style={{ width: '100%', height: 'auto' }}>
+      <div style={{ width: '100%', height: 'auto' }} className={styles.mainLayout}>
         <Box sx={{ display: 'grid', height: '100%', gridTemplateColumns: 'repeat(12, 1fr)', gap: '2px' }}>
           {/* header */}
           <Box sx={{ gridColumn: 'span 12', maxHeight: '110px', overflow: 'hidden', borderBottom: '.2em solid hsla(0, 0%, 0%, 0.05) ' }}>
@@ -236,6 +237,7 @@ const MainRoot = () => {
           </Box>
         </Box>
       </div>
+      <ChartCardsPhones />
     </PerfectScrollbar>
   );
 };

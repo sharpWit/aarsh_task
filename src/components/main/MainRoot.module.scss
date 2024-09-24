@@ -28,3 +28,15 @@
   line-height: 20;
   color: rgba(66, 66, 66, 1);
 }
+
+.mainLayout {
+  display: none;
+}
+
+@media (min-width: 1023px) {
+  .mainLayout {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
