@@ -17,7 +17,7 @@ const Header = () => {
         overflow: 'hidden',
         backgroundColor: '#f0f0f0',
         color: '#616161',
-        border: '.2em solid hsla(0, 0%, 0%, 0.05) '
+        borderBottom: '.2em solid hsla(0, 0%, 0%, 0.05) '
       }}
     >
       {/* Header Content */}
@@ -31,8 +31,8 @@ const Header = () => {
             src="src/assets/Host-brand.png"
             alt="Host Brand Logo"
             style={{
-              width: '100%',
-              height: '100%',
+              width: '24px',
+              height: '24px',
               objectFit: 'contain',
               imageRendering: 'crisp-edges',
               filter: 'contrast(110%) brightness(95%)'
@@ -128,7 +128,7 @@ const Header = () => {
             <img src="src/assets/icons/elipses.svg" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <div style={{ cursor: 'pointer' }}>
-            <img src="src/assets/Avatar.png" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <img src="src/assets/Avatar.png" style={{ width: '30px', height: '30px', objectFit: 'contain' }} />
           </div>
           <div style={{ cursor: 'pointer', marginBottom: '6px' }}>
             <img src="src/assets/icons/hiphen.svg" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
