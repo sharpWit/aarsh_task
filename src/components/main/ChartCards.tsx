@@ -1,7 +1,7 @@
 import { Box, Card } from '@mui/material';
 import { chartsItems } from '../../libs/options';
 import Grid from '@mui/material/Grid2';
-import { Gauge, gaugeClasses } from '@mui/x-charts/Gauge';
+import { BarChart } from '@mui/x-charts/BarChart';
 
 const ChartCards = () => {
   return (
@@ -11,8 +11,6 @@ const ChartCards = () => {
           <Grid key={card.id} size={4}>
             <Card
               sx={{
-                // height: '100%',
-                // width: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -22,22 +20,13 @@ const ChartCards = () => {
               <h3>{card.title}</h3>
               <p>{card.disc}</p>
 
-              <div style={{ width: '90%', height: '100%' }}>
-                <Gauge
-                  value={72}
-                  startAngle={-90}
-                  endAngle={90}
-                  sx={{
-                    width: '100%',
-                    height: '100%',
-                    [`& .${gaugeClasses.valueText}`]: {
-                      fontSize: 40,
-                      transform: 'translate(0px, 0px)'
-                    }
-                  }}
-                  text={({ value }) => `${value} %`}
-                />
-              </div>
+              <BarChart
+                sx={{ width: '100%', height: '100%', padding: '32px' }}
+                xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
+                series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
+                width={500}
+                height={300}
+              />
             </Card>
           </Grid>
         ))}
