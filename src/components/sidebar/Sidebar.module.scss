@@ -1,11 +1,9 @@
-.mainLayout {
+.mainSidebar {
   display: none;
 }
 
 @media (min-width: 1023px) {
-  .mainLayout {
+  .mainSidebar {
     display: block;
-    padding-left: 0;
-    padding-right: 0;
   }
 }

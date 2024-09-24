@@ -1,6 +1,6 @@
 // third-party
 import { Outlet, useLocation } from 'react-router-dom';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 
 import Header from '../components/header/Header';
 import Sidebar from '../components/sidebar/Sidebar';
@@ -53,16 +53,15 @@ const MainLayout = () => {
         <Sidebar />
 
         {/* Main Container */}
-        <Container
-          maxWidth="xl"
-          sx={{
-            maxWidth: '1298px',
+        <div
+          style={{
+            maxWidth: '1800px',
             width: '100%',
             height: '100%',
-            mt: '48px',
+            marginTop: '48px',
             backgroundColor: '#ffffff'
           }}
-          className={styles['css-1mtq39y-MuiContainer-root']}
+          className={styles.mainLayout}
         >
           {/* Main Content */}
 
@@ -71,7 +70,7 @@ const MainLayout = () => {
             {/* Copyright */}
             {/* <Copyright /> */}
           </Box>
-        </Container>
+        </div>
       </main>
     </>
   );
