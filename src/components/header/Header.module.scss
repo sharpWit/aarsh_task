@@ -1,0 +1,72 @@
+.mainHeader {
+  display: none;
+}
+.mainHeaderPhones {
+  display: block;
+  width: '100%';
+  margin: '0 auto';
+  overflow: 'hidden';
+  background-color: '#f0f0f0';
+  color: '#616161';
+  border-bottom: 0.2em solid hsla(0, 0%, 0%, 0.05);
+  .mainHeaderPhonesContent {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 4px;
+    .headTop {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      & .heading {
+        font-family: 'Segoe UI';
+        font-weight: 700;
+      }
+    }
+    .headBottom {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  .mainHeaderPhones {
+    display: none;
+  }
+}
+
+@media (min-width: 1023px) {
+  .mainHeader {
+    display: block;
+    width: '100%';
+    margin: '0 auto';
+    overflow: 'hidden';
+    background-color: '#f0f0f0';
+    color: '#616161';
+    border-bottom: 0.2em solid hsla(0, 0%, 0%, 0.05);
+
+    .inputWrapper {
+      border-radius: 0.3em;
+      padding: 0.2em;
+      margin-bottom: 0.2em;
+      box-shadow:
+        0px 0px 2px #616161,
+        0px 0px 5px #616161;
+      display: flex;
+      align-items: center;
+      .css-ro0uv6-MuiFormControl-root-MuiTextField-root {
+        border: none;
+        width: 100%;
+      }
+
+      .searchIcon {
+        margin-right: 0.5em;
+        display: flex;
+        justify-content: 'center';
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.sidebarDropdown {
+  width: 100%;
+  // text-align: left;
+}
+
+.dropdownBtn {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #333;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.dropdownBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.icon {
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-right: 10px;
+}
+
+.open {
+  transform: rotate(-135deg);
+}
+
+.dropdownContainer {
+  max-height: 0;
+  overflow: hidden;
+  margin-left: 14px;
+  transition: max-height 0.3s ease;
+}
+
+.show {
+  max-height: 500px; /* Adjust this value based on content */
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: #d28787;
+}
+
+.nestedItems {
+  padding-left: 20px;
+}
+
+.dropdownLink {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  transition:
+    background-color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.dropdownLink:hover {
+  background-color: #d28787;
+}
+
+.dropdownLink i {
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  margin-right: 10px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
